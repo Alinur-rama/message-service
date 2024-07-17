@@ -1,3 +1,0 @@
-server_address: ":8080"
-postgres_url: "postgres://user:password@localhost:5432/message_service?sslmode=disable"
-kafka_broker: "localhost:9092"

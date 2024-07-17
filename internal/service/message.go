@@ -3,9 +3,11 @@ package service
 import (
 	"context"
 	"encoding/json"
+	"fmt"
+	"net/http"
+
 	"message-service/config"
 	"message-service/internal/repository"
-	"net/http"
 
 	"github.com/gin-gonic/gin"
 	"github.com/segmentio/kafka-go"
@@ -17,6 +19,7 @@ type MessageService struct {
 }
 
 func NewMessageService(cfg *config.Config) *MessageService {
+	fmt.Println(cfg.PostgresURL)
 	repo := repository.NewMessageRepository(cfg.PostgresURL)
 	kafkaWriter := kafka.NewWriter(kafka.WriterConfig{
 		Brokers: []string{cfg.KafkaBroker},

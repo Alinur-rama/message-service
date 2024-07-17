@@ -16,7 +16,7 @@ type Config struct {
 func LoadConfig() *Config {
 	viper.SetConfigName("config")
 
-	viper.AddConfigPath(".")
+	viper.AddConfigPath("config/")
 
 	viper.AutomaticEnv()
 

@@ -2,10 +2,11 @@ package main
 
 import (
 	"log"
-	"message-service/config"
-	"message-service/internal/handler"
 
 	"github.com/gin-gonic/gin"
+
+	"message-service/config"
+	"message-service/internal/handler"
 )
 
 func main() {
